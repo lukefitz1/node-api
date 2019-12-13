@@ -21,20 +21,7 @@ phases:
       - echo Starting the Install phase
       - node --version
       - npm --version
-      # - echo Installing sudo
-      # - sudo apt-get update -y
-      # - sudo apt-get install sudo -y
-      # - echo Installing NodeJS
-      # - sudo mkdir /usr/local/lib/nodejs
-      # - "wget -q https://nodejs.org/download/release/v${NODEVERSION}/node-v${NODEVERSION}-linux-x64.tar.xz"
-      # - 'sudo tar -xJf "node-v${NODEVERSION}-linux-x64.tar.xz" -C /usr/local/lib/nodejs'
-      # - "sudo rm -f node-v${NODEVERSION}-linux-x64.tar.xz"
-      # - "sudo mv /usr/local/lib/nodejs/node-v${NODEVERSION}-linux-x64 /usr/local/lib/nodejs/node-v${NODEVERSION}"
-      # - NODEJS_HOME="/usr/local/lib/nodejs/node-v${NODEVERSION}"
-      # - PATH=$NODEJS_HOME/bin:$PATH
-      # - node -v
-      # - npm --version
-      # - rm -f ~/.npmrc
+      - pwd
   build:
     commands:
       - echo "Running Build step"
