@@ -19,8 +19,8 @@ phases:
 
     commands:
       - echo Installing sudo
-      - apt-get update -y
-      - apt-get install sudo -y
+      - sudo apt-get update -y
+      # - sudo apt-get install sudo -y
       - echo Installing NodeJS
       - sudo mkdir /usr/local/lib/nodejs
       - "wget -q https://nodejs.org/download/release/v${NODEVERSION}/node-v${NODEVERSION}-linux-x64.tar.xz"
