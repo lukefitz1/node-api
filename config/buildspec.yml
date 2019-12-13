@@ -15,7 +15,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 8
+      nodejs: 8.15.0
 
     commands:
       - echo Installing NodeJS
