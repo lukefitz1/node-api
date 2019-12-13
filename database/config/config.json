@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "DB_USERNAME",
     "password": "DB_PASSWORD",
     "database": "node_api_development",
     "host": "127.0.0.1",
@@ -9,8 +9,8 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "postgres",
-    "password": null,
+    "username": "DB_USERNAME",
+    "password": "DB_PASSWORD",
     "database": "node_api_test",
     "host": "127.0.0.1",
     "port": 5432,
@@ -18,8 +18,8 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "postgres",
-    "password": null,
+    "username": "DB_USERNAME",
+    "password": "DB_PASSWORD",
     "database": "node_api_production",
     "host": "127.0.0.1",
     "port": 5432,
