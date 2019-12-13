@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": null,
+    "password": "DB_PASSWORD",
     "database": "node_api_development",
     "host": "127.0.0.1",
     "port": 5432,
