@@ -8,8 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       id: {
         primaryKey: true,
         allowNull: false,
-        type: DataTypes.UUID,
-        defaultValue: uuid()
+        type: DataTypes.UUID
       },
       firstName: DataTypes.STRING,
       lastName: DataTypes.STRING,
@@ -17,8 +16,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
+
+  User.beforeValidate(user => {
+    user.id = uuid();
+  });
+
   // User.associate = function(models) {
   //   // associations can be defined here
   // };
+
   return User;
 };
