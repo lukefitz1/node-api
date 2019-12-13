@@ -18,7 +18,7 @@ phases:
       nodejs: 8
 
     commands:
-      - Starting the Install phase
+      - echo Starting the Install phase
       - echo node --version
       - echo npm --version
       # - echo Installing sudo
