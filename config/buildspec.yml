@@ -19,8 +19,8 @@ phases:
 
     commands:
       - echo Starting the Install phase
-      - echo node --version
-      - echo npm --version
+      - node --version
+      - npm --version
       # - echo Installing sudo
       # - sudo apt-get update -y
       # - sudo apt-get install sudo -y
