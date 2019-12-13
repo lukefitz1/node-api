@@ -15,19 +15,20 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 8
+      nodejs: 10
 
     commands:
       - echo Starting the Install phase
       - node --version
       - npm --version
       - pwd
+
   build:
     commands:
       - echo "Running Build step"
       - echo Install NPM Packages
       - echo "unsafe-perm=true" >> .npmrc
-      - npm install >/dev/null
+      - npm install
 
   post_build:
     commands:
