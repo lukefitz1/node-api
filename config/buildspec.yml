@@ -27,7 +27,6 @@ phases:
     commands:
       - echo "Running Build step"
       - echo Install NPM Packages
-      - echo "unsafe-perm=true" >> .npmrc
       - npm install
 
   post_build:
