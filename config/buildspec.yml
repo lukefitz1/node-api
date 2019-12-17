@@ -28,11 +28,6 @@ phases:
       - echo "Running Build step"
       - echo Install NPM Packages
       - npm install
-      - echo $DB_HOST
-      - echo $DB_NAME
-      - echo $DB_USER
-      - echo $DB_PASSWORD
-      - echo $DB_PORT
 
   post_build:
     commands:
