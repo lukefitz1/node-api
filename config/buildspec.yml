@@ -31,6 +31,8 @@ phases:
 
   post_build:
     commands:
+      - echo Going to try to fail the build step here
+      - if [ -z "${TARGET_ENVIRONMENT}" ]; then exit 1; fi
       - echo Running post-build commands
       - echo Running db migrations
       - ./node_modules/.bin/sequelize db:migrate --env=test
