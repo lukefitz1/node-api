@@ -33,12 +33,12 @@ phases:
       - echo $DB_USER
       - echo $DB_PASSWORD
       - echo $DB_PORT
-      - echo Running db migrations
-      - ./node_modules/.bin/sequelize db:migrate --env=test
 
   post_build:
     commands:
       - echo Running post-build commands
+      - echo Running db migrations
+      - ./node_modules/.bin/sequelize db:migrate --env=test
       - echo Build completed on `date`
 artifacts:
   files:
