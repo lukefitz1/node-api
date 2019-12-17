@@ -3,14 +3,22 @@
 version: 0.2
 
 env:
-  variables:
-    DB_HOST: "localhost"
-    DB_NAME: postgresql
-    DB_USER: lukefitzgerald
-    DB_PORT: 5432
-    DB_PASSWORD: "this-is-a-temporary-password-and-is-not-sensitive"
-    ENVIRONMENT: "DEV"
-    NODEVERSION: "8.15.0"
+  # variables:
+  #   DB_HOST: "localhost"
+  #   DB_NAME: postgresql
+  #   DB_USER: lukefitzgerald
+  #   DB_PORT: 5432
+  #   DB_PASSWORD: "this-is-a-temporary-password-and-is-not-sensitive"
+  #   ENVIRONMENT: "DEV"
+  #   NODEVERSION: "8.15.0"
+
+  parameter-store:
+    DB_HOST: "DB_HOST"
+    DB_NAME: "DB_NAME"
+    DB_USER: "DB_USER"
+    DB_PORT: "DB_PORT"
+    DB_PASSWORD: "DB_PASSWORD"
+    ENVIRONMENT: "test"
 
 phases:
   install:
@@ -28,6 +36,7 @@ phases:
       - echo "Running Build step"
       - echo Install NPM Packages
       - npm install
+      - echo $DB_NAME
       - echo Running db migrations
       - ./node_modules/.bin/sequelize db:migrate
 
