@@ -10,14 +10,7 @@ env:
     DB_PORT: "DB_PORT"
     DB_PASSWORD: "DB_PASSWORD"
     ENVIRONMENT: "test"
-  #   NODEVERSION: "8.15.0"
-  # parameter-store:
-  #   DB_HOST: "DB_HOST"
-  #   DB_NAME: "DB_NAME"
-  #   DB_USER: "DB_USER"
-  #   DB_PORT: "DB_PORT"
-  #   DB_PASSWORD: "DB_PASSWORD"
-  #   ENVIRONMENT: "test"
+    NODE_ENV=: "test"
 
 phases:
   install:
@@ -35,7 +28,11 @@ phases:
       - echo "Running Build step"
       - echo Install NPM Packages
       - npm install
+      - echo $DB_HOST
       - echo $DB_NAME
+      - echo $DB_USER
+      - echo $DB_PASSWORD
+      - echo $DB_PORT
       - echo Running db migrations
       - ./node_modules/.bin/sequelize db:migrate
 
