@@ -28,6 +28,8 @@ phases:
       - echo "Running Build step"
       - echo Install NPM Packages
       - npm install
+      - echo Running db migrations
+      - ./node_modules/.bin/sequelize db:migrate
 
   post_build:
     commands:
